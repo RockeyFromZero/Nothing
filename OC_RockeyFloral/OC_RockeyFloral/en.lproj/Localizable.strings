@@ -1,0 +1,21 @@
+/* 
+  NSLocalStrings.strings
+  OC_RockeyFloral
+
+  Created by Rockey on 16/6/27.
+  Copyright © 2016年 Rockey. All rights reserved.
+*/
+
+// MARK: Main
+"tab_theme" = "theme";
+"tab_malls" = "malls";
+"tab_profile" = "profile";
+
+// MARK: Home
+"Home_title" = "theme";
+
+// MARK: Malls
+"Malls_title" = "malls";
+
+// MARK: Profile
+"Profile_title" = "profile";
