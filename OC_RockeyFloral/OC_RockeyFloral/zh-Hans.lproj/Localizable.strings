@@ -17,5 +17,8 @@
 // MARK: Malls
 "Malls_title" = "商城";
 
+"ADS_first" = "精选";
+"ADS_second" = "商城";
+
 // MARK: Profile
 "Profile_title" = "我的";

@@ -32,6 +32,12 @@
     if (self = [super init]) {
         _topType = topType;
         [self setupUI];
+        
+        [[RACObserve(self, titles) ignore:nil] subscribeNext:^(NSArray *titles) {
+            
+            [self.articalBtn setTitle:titles[0] forState:UIControlStateNormal];
+            [self.authorBtn setTitle:titles[1] forState:UIControlStateNormal];
+        }];
     }
     return self;
 }

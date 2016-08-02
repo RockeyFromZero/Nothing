@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADS.h"
+
+@protocol MallsTopCellDelegate <NSObject>
+
+@required
+- (void)mallsTopCellDidSelectAtIndex:(NSInteger)index;
+
+@end
 
 @interface MallsTopCell : UITableViewCell
+
+@property (nonatomic, weak) id<MallsTopCellDelegate> delegate;
+
+@property (nonatomic, strong) ADS *model;
 
 @end

@@ -13,4 +13,6 @@
 + (instancetype)topMenu:(void (^)(TopType))topType;
 - (instancetype)initWithBlock:(void (^)(TopType))topType;
 
+@property (nonatomic, copy) NSArray *titles;
+
 @end

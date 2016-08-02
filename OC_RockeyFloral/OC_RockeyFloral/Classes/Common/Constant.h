@@ -25,11 +25,11 @@ typedef NS_ENUM(NSInteger, TopType) {
 };
 
 /** 商城：精选(jingList/1) & 商城(theme) */
-typedef NS_ENUM(NSInteger, MallIdentity) {
+typedef NS_ENUM(NSInteger, MallType) {
     /** 商城-精选 */
-    MallsIdentity_jingxuan,
+    MallType_jingxuan,
     /** 商城-Normal */
-    MallsIdentity_theme
+    MallType_theme
 };
 
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)

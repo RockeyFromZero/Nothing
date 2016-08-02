@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MallsGoods.h"
 
 @interface MallsViewModel : NSObject
+
+@property (nonatomic, assign)  MallType mallType;
+
++ (instancetype)viewModel:(void (^)(ErrorCode ErrorCode, id))success 
+                         failure:(void (^)(void))failure;
+
+- (void)getFirst;
+- (void)getNext;
 
 @end

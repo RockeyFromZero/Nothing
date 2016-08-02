@@ -14,4 +14,6 @@
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 + (NSArray *)RGBWithHexString:(NSString *)stringToConvert;
 
++ (UIColor *)gray:(CGFloat)gray;
+
 @end

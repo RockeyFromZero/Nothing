@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goods.h"
 
 @interface MallsNormalCell : UITableViewCell
+
+@property (nonatomic, strong) Goods *model;
 
 @end

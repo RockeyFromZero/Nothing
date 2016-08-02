@@ -11,8 +11,6 @@
 
 @interface HomeViewModel : NSObject
 
-@property (nonatomic, strong) NSMutableArray *models;
-
 + (instancetype)viewModel:(void (^)(id))success failure:(void (^)(id))failure;
 - (void)getNext;
 - (void)getFirst;

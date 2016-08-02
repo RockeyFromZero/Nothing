@@ -33,6 +33,7 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 @property (nonatomic) NSUInteger currentPage;
 /** 主题列表 */
 @property (nonatomic, strong) HomeViewModel *homeVM;
+@property (nonatomic, copy) NSArray *showAriticals;
 
 @end
 
@@ -40,8 +41,9 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 
 - (HomeViewModel *)homeVM {
     if (!_homeVM) {
-        _homeVM = [HomeViewModel viewModel:^(id value) {
+        _homeVM = [HomeViewModel viewModel:^(NSArray *value) {
             
+            _showAriticals = [value copy];
             [self hideHUDAfterDelay:.8];
             if ([self.tableView.mj_footer isRefreshing]) {
                 [self.tableView.mj_footer endRefreshing];
@@ -61,14 +63,14 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [CategoryViewModel viewModel:^(id success) {
-            self.blurView.categories = success;
-        } failure:^(id failure) { }];
-        [self homeVM];
-    });
+    [CategoryViewModel viewModel:^(id success) {
+        self.blurView.categories = success;
+    } failure:^(id failure) { }];
     
     [self setup];
+    
+    [self showHUD:@""];
+    [self.homeVM getFirst];
 }
 
 - (void)setupNavigation {
@@ -82,6 +84,7 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 - (void)setup {
     [self setupNavigation];
     
+    _showAriticals = [NSArray array];
     [self.tableView registerClass:[HomeArticalCell class] forCellReuseIdentifier:kHomeArticalReuseId];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableFooterView = [UIView new];
@@ -96,9 +99,7 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
         [self.homeVM getFirst];
     }];
     
-    [self.tableView addSubview:self.hud];
-    [self showHUD:@""];
-    [self.homeVM getFirst];
+    self.hudSuperView = kWindow;
 }
 
 - (void)toTop {
@@ -107,20 +108,20 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.homeVM.models.count;
+    return self.showAriticals.count;
 }
 - (HomeArticalCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeArticalCell *cell = [tableView dequeueReusableCellWithIdentifier:kHomeArticalReuseId];
-    cell.artical = (Artical *)self.homeVM.models[indexPath.row];
+    cell.artical = (Artical *)self.showAriticals[indexPath.row];
     
-    if (indexPath.row == self.homeVM.models.count-1) {
+    if (indexPath.row == self.showAriticals.count-1) {
         [self.homeVM getNext];
     }
     
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Artical *artical = (Artical *)self.homeVM.models[indexPath.row];
+    Artical *artical = (Artical *)self.showAriticals[indexPath.row];
     DetailViewController *detail = [DetailViewController new];
     detail.artical = artical;
     /**  在ios7以上运行却发现在push一半的时候会卡顿一下，这是由于UIViewController是一个空的，背景色为透明的导致的 */

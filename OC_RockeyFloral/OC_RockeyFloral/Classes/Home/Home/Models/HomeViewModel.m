@@ -13,6 +13,8 @@
 @property (nonatomic, copy) void (^success)(id);
 @property (nonatomic, copy) void (^failure)(id);
 
+/** models 在 列表刷新的时候 是变化的 不能作为 Home主题列表数据 */
+@property (nonatomic, strong) NSMutableArray *models;
 @property (nonatomic) NSUInteger currentPage;
 
 @end
@@ -40,10 +42,7 @@ static void *kGetDataSuccess = @"HomeVM_GetDataSuccess";
     
     [RACObserve(self, currentPage) subscribeNext:^(id x) {
         if ([@0 isEqual:objc_getAssociatedObject(self, &pageMinusKey)]) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                
-                [self getDatas];
-            });
+            [self getDatas];
         }
     }];
 }

@@ -42,7 +42,6 @@ static NSString* kCategoryLocalPath = @"kCategoryPath";
 }
 
 - (void)getDatas {
-    
     [[NetworkTool sharedTool] getAction:@"http://m.htxq.net/servlet/SysCategoryServlet?action=getList" paras:nil success:^(NSDictionary *success) {
         if ([success[@"status"] isEqual:@1]) {
             

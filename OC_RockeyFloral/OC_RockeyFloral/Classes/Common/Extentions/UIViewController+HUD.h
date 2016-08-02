@@ -12,6 +12,7 @@
 @interface UIViewController(HUD)
 
 @property (nonatomic, weak) MBProgressHUD *hud;
+@property (nonatomic, weak) UIView *hudSuperView;
 
 - (void)showHUD:(NSString *)text;
 - (void)hideHUDAfterDelay:(NSTimeInterval)delay;

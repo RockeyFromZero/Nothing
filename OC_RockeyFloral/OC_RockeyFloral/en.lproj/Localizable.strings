@@ -17,5 +17,10 @@
 // MARK: Malls
 "Malls_title" = "malls";
 
+"ADS_first" = "best";
+"ADS_second" = "malls";
+
+
+
 // MARK: Profile
 "Profile_title" = "profile";
