@@ -79,7 +79,7 @@
     [button setTitle:title forState:UIControlStateNormal];
     [button setImage:img forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont fontWithName:@"HanziPenSC-W3" size:13];
+    button.titleLabel.font = [UIFont fontWithName:@"CODE LIGHT" size:13];
     [self addSubview:button];
     return button;
 }

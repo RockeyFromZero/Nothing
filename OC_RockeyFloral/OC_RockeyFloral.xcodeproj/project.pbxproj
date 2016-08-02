@@ -54,6 +54,7 @@
 		AD4799DD1D1CDF83008844AE /* UINavigationController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4799DC1D1CDF83008844AE /* UINavigationController+Extention.m */; };
 		AD56EED31D387A7600F9685A /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD56EED21D387A7600F9685A /* Kaiti.ttf */; };
 		AD6BD44A1D3B54FA001DA38D /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */; };
+		AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C4B1D50C4E100837D8B /* ADSViewModel.m */; };
 		AD8933101D21410E001540C0 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD89330F1D21410E001540C0 /* NavigationController.m */; };
 		AD8933441D222249001540C0 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8933431D222249001540C0 /* BlurView.m */; };
 		AD928F5E1D36165600B5B3D1 /* Bodoni Ornaments.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD928F5D1D36165600B5B3D1 /* Bodoni Ornaments.ttf */; };
@@ -63,7 +64,6 @@
 		AD9885F91D479742006C10A6 /* MallsGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9885F81D479742006C10A6 /* MallsGoods.m */; };
 		ADA1207D1D3880CC00F21133 /* CODE BOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = ADA120791D3880CC00F21133 /* CODE BOLD.OTF */; };
 		ADA1207E1D3880CC00F21133 /* CODE LIGHT.OTF in Resources */ = {isa = PBXBuildFile; fileRef = ADA1207A1D3880CC00F21133 /* CODE LIGHT.OTF */; };
-		ADA1207F1D3880CC00F21133 /* FZXQJW_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = ADA1207B1D3880CC00F21133 /* FZXQJW_0.TTF */; };
 		ADA120801D3880CC00F21133 /* 方正兰亭纤黑简体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = ADA1207C1D3880CC00F21133 /* 方正兰亭纤黑简体.TTF */; };
 		ADA120961D39031F00F21133 /* image.js in Resources */ = {isa = PBXBuildFile; fileRef = ADA120951D39031F00F21133 /* image.js */; };
 		ADA120991D390DCA00F21133 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA120981D390DCA00F21133 /* NSDate+Extention.m */; };
@@ -86,8 +86,6 @@
 		ADB5684F1D45A3BB008E3FBD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5684A1D45A3BB008E3FBD /* libWeChatSDK.a */; };
 		ADB568501D45A3BB008E3FBD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = ADB5684B1D45A3BB008E3FBD /* README.md */; };
 		ADC5E1AD1D2411BF00B8D12C /* font.md in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1AA1D2411BF00B8D12C /* font.md */; };
-		ADC5E1AE1D2411BF00B8D12C /* Hanzipen.ttc in Resources */ = {isa = PBXBuildFile; fileRef = ADC5E1AB1D2411BF00B8D12C /* Hanzipen.ttc */; };
-		ADC5E1AF1D2411BF00B8D12C /* WawaSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADC5E1AC1D2411BF00B8D12C /* WawaSC-Regular.otf */; };
 		ADC5E1B51D24A8F800B8D12C /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B21D24A8F800B8D12C /* HJCornerRadius.m */; };
 		ADC5E1B61D24A8F800B8D12C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B41D24A8F800B8D12C /* UIColor+Extention.m */; };
 		ADE243511D4264190086EB9E /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE243501D4264190086EB9E /* SearchBar.m */; };
@@ -201,6 +199,8 @@
 		AD56EED21D387A7600F9685A /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
 		AD6BD4481D3B54FA001DA38D /* UIViewController+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extention.h"; sourceTree = "<group>"; };
 		AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extention.m"; sourceTree = "<group>"; };
+		AD877C4B1D50C4E100837D8B /* ADSViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSViewModel.m; sourceTree = "<group>"; };
+		AD877C4C1D50C4E100837D8B /* ADSViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSViewModel.h; sourceTree = "<group>"; };
 		AD89330E1D21410E001540C0 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		AD89330F1D21410E001540C0 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		AD8933411D221AAD001540C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -217,7 +217,6 @@
 		AD9885F81D479742006C10A6 /* MallsGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallsGoods.m; sourceTree = "<group>"; };
 		ADA120791D3880CC00F21133 /* CODE BOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE BOLD.OTF"; sourceTree = "<group>"; };
 		ADA1207A1D3880CC00F21133 /* CODE LIGHT.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE LIGHT.OTF"; sourceTree = "<group>"; };
-		ADA1207B1D3880CC00F21133 /* FZXQJW_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXQJW_0.TTF; sourceTree = "<group>"; };
 		ADA1207C1D3880CC00F21133 /* 方正兰亭纤黑简体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭纤黑简体.TTF"; sourceTree = "<group>"; };
 		ADA120951D39031F00F21133 /* image.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = image.js; sourceTree = "<group>"; };
 		ADA120971D390DCA00F21133 /* NSDate+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
@@ -246,8 +245,6 @@
 		ADB5684E1D45A3BB008E3FBD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		ADC5E1A41D23F82E00B8D12C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		ADC5E1AA1D2411BF00B8D12C /* font.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = font.md; sourceTree = "<group>"; };
-		ADC5E1AB1D2411BF00B8D12C /* Hanzipen.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanzipen.ttc; sourceTree = "<group>"; };
-		ADC5E1AC1D2411BF00B8D12C /* WawaSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WawaSC-Regular.otf"; sourceTree = "<group>"; };
 		ADC5E1B11D24A8F800B8D12C /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
 		ADC5E1B21D24A8F800B8D12C /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
 		ADC5E1B31D24A8F800B8D12C /* UIColor+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
@@ -703,6 +700,8 @@
 				ADE243641D43524E0086EB9E /* Category */,
 				ADE2435B1D4342430086EB9E /* MallsViewModel.h */,
 				ADE2435C1D4342430086EB9E /* MallsViewModel.m */,
+				AD877C4C1D50C4E100837D8B /* ADSViewModel.h */,
+				AD877C4B1D50C4E100837D8B /* ADSViewModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -795,12 +794,9 @@
 			children = (
 				ADA120791D3880CC00F21133 /* CODE BOLD.OTF */,
 				ADA1207A1D3880CC00F21133 /* CODE LIGHT.OTF */,
-				ADA1207B1D3880CC00F21133 /* FZXQJW_0.TTF */,
 				ADA1207C1D3880CC00F21133 /* 方正兰亭纤黑简体.TTF */,
 				ADC5E1AA1D2411BF00B8D12C /* font.md */,
 				AD928F5D1D36165600B5B3D1 /* Bodoni Ornaments.ttf */,
-				ADC5E1AB1D2411BF00B8D12C /* Hanzipen.ttc */,
-				ADC5E1AC1D2411BF00B8D12C /* WawaSC-Regular.otf */,
 				AD56EED21D387A7600F9685A /* Kaiti.ttf */,
 			);
 			path = Fonts;
@@ -978,11 +974,8 @@
 				AD4799AC1D1CDD0B008844AE /* LaunchScreen.storyboard in Resources */,
 				ADA120801D3880CC00F21133 /* 方正兰亭纤黑简体.TTF in Resources */,
 				ADA870B31D20B01300E94988 /* Localizable.strings in Resources */,
-				ADC5E1AE1D2411BF00B8D12C /* Hanzipen.ttc in Resources */,
-				ADC5E1AF1D2411BF00B8D12C /* WawaSC-Regular.otf in Resources */,
 				AD4799A91D1CDD0B008844AE /* Assets.xcassets in Resources */,
 				AD56EED31D387A7600F9685A /* Kaiti.ttf in Resources */,
-				ADA1207F1D3880CC00F21133 /* FZXQJW_0.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,6 +1057,7 @@
 				AD3F0E491D3E292800D1C690 /* CommentCell.m in Sources */,
 				AD47999E1D1CDD0B008844AE /* AppDelegate.m in Sources */,
 				AD3F0E4F1D3E292800D1C690 /* CommentViewController.m in Sources */,
+				AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */,
 				AD3F0E471D3E292800D1C690 /* ShareVM.m in Sources */,
 				ADE2436D1D448C8A0086EB9E /* MallsCategoryHeader.m in Sources */,
 				AD3BE19B1D2A44CB00B2B54C /* UITableView+Extention.m in Sources */,
