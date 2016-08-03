@@ -14,7 +14,7 @@
              @"fnDesc":@"fnDesc",
              @"fnId":@"fnId",
              @"fnName":@"fnName",
-             @"goodsList":@"goodsList"
+             @"goodsList":@"childrenList"
              };
 }
 

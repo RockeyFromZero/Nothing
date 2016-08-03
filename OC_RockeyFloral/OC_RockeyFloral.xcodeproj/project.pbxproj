@@ -54,6 +54,7 @@
 		AD4799DD1D1CDF83008844AE /* UINavigationController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4799DC1D1CDF83008844AE /* UINavigationController+Extention.m */; };
 		AD56EED31D387A7600F9685A /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD56EED21D387A7600F9685A /* Kaiti.ttf */; };
 		AD6BD44A1D3B54FA001DA38D /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */; };
+		AD7E20091D520E1F006DA624 /* MallsThemeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E20081D520E1F006DA624 /* MallsThemeCollectionCell.m */; };
 		AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C4B1D50C4E100837D8B /* ADSViewModel.m */; };
 		AD877C501D50C85500837D8B /* MallsThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C4F1D50C85500837D8B /* MallsThemeCell.m */; };
 		AD877C531D50CB4D00837D8B /* MallsThemeCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C521D50CB4D00837D8B /* MallsThemeCellHeader.m */; };
@@ -201,6 +202,8 @@
 		AD56EED21D387A7600F9685A /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
 		AD6BD4481D3B54FA001DA38D /* UIViewController+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extention.h"; sourceTree = "<group>"; };
 		AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extention.m"; sourceTree = "<group>"; };
+		AD7E20071D520E1F006DA624 /* MallsThemeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallsThemeCollectionCell.h; sourceTree = "<group>"; };
+		AD7E20081D520E1F006DA624 /* MallsThemeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallsThemeCollectionCell.m; sourceTree = "<group>"; };
 		AD877C4B1D50C4E100837D8B /* ADSViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSViewModel.m; sourceTree = "<group>"; };
 		AD877C4C1D50C4E100837D8B /* ADSViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSViewModel.h; sourceTree = "<group>"; };
 		AD877C4E1D50C85500837D8B /* MallsThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallsThemeCell.h; sourceTree = "<group>"; };
@@ -725,6 +728,8 @@
 				AD877C4F1D50C85500837D8B /* MallsThemeCell.m */,
 				AD877C511D50CB4D00837D8B /* MallsThemeCellHeader.h */,
 				AD877C521D50CB4D00837D8B /* MallsThemeCellHeader.m */,
+				AD7E20071D520E1F006DA624 /* MallsThemeCollectionCell.h */,
+				AD7E20081D520E1F006DA624 /* MallsThemeCollectionCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1083,6 +1088,7 @@
 				AD9885F31D479727006C10A6 /* ADS.m in Sources */,
 				AD3F0E4A1D3E292800D1C690 /* DetailFooterView.m in Sources */,
 				AD3F0E651D3E341B00D1C690 /* TopMenuView.m in Sources */,
+				AD7E20091D520E1F006DA624 /* MallsThemeCollectionCell.m in Sources */,
 				ADE243511D4264190086EB9E /* SearchBar.m in Sources */,
 				AD4799A71D1CDD0B008844AE /* OC_RockeyFloral.xcdatamodeld in Sources */,
 				ADA870911D1D1A0400E94988 /* ProfileViewController.m in Sources */,

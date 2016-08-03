@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MallsGoods.h"
 
 @interface MallsThemeCellHeader : UIView
+
+@property (nonatomic, strong) MallsGoods *model;
 
 @end
