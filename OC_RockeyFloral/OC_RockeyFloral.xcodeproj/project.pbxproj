@@ -55,6 +55,8 @@
 		AD56EED31D387A7600F9685A /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD56EED21D387A7600F9685A /* Kaiti.ttf */; };
 		AD6BD44A1D3B54FA001DA38D /* UIViewController+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */; };
 		AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C4B1D50C4E100837D8B /* ADSViewModel.m */; };
+		AD877C501D50C85500837D8B /* MallsThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C4F1D50C85500837D8B /* MallsThemeCell.m */; };
+		AD877C531D50CB4D00837D8B /* MallsThemeCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD877C521D50CB4D00837D8B /* MallsThemeCellHeader.m */; };
 		AD8933101D21410E001540C0 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD89330F1D21410E001540C0 /* NavigationController.m */; };
 		AD8933441D222249001540C0 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8933431D222249001540C0 /* BlurView.m */; };
 		AD928F5E1D36165600B5B3D1 /* Bodoni Ornaments.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD928F5D1D36165600B5B3D1 /* Bodoni Ornaments.ttf */; };
@@ -201,6 +203,10 @@
 		AD6BD4491D3B54FA001DA38D /* UIViewController+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extention.m"; sourceTree = "<group>"; };
 		AD877C4B1D50C4E100837D8B /* ADSViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSViewModel.m; sourceTree = "<group>"; };
 		AD877C4C1D50C4E100837D8B /* ADSViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSViewModel.h; sourceTree = "<group>"; };
+		AD877C4E1D50C85500837D8B /* MallsThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallsThemeCell.h; sourceTree = "<group>"; };
+		AD877C4F1D50C85500837D8B /* MallsThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallsThemeCell.m; sourceTree = "<group>"; };
+		AD877C511D50CB4D00837D8B /* MallsThemeCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallsThemeCellHeader.h; sourceTree = "<group>"; };
+		AD877C521D50CB4D00837D8B /* MallsThemeCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallsThemeCellHeader.m; sourceTree = "<group>"; };
 		AD89330E1D21410E001540C0 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		AD89330F1D21410E001540C0 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		AD8933411D221AAD001540C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -515,8 +521,6 @@
 		AD4799981D1CDD0B008844AE /* OC_RockeyFloral */ = {
 			isa = PBXGroup;
 			children = (
-				AD47999C1D1CDD0B008844AE /* AppDelegate.h */,
-				AD47999D1D1CDD0B008844AE /* AppDelegate.m */,
 				AD4799CF1D1CDEBC008844AE /* Classes */,
 				AD4799991D1CDD0B008844AE /* Supporting Files */,
 			);
@@ -526,6 +530,8 @@
 		AD4799991D1CDD0B008844AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AD47999C1D1CDD0B008844AE /* AppDelegate.h */,
+				AD47999D1D1CDD0B008844AE /* AppDelegate.m */,
 				AD4799A81D1CDD0B008844AE /* Assets.xcassets */,
 				AD4799AA1D1CDD0B008844AE /* LaunchScreen.storyboard */,
 				AD4799AD1D1CDD0B008844AE /* Info.plist */,
@@ -715,6 +721,10 @@
 				ADE243591D4342220086EB9E /* MallsTopCell.m */,
 				ADE2436B1D448C8A0086EB9E /* MallsCategoryHeader.h */,
 				ADE2436C1D448C8A0086EB9E /* MallsCategoryHeader.m */,
+				AD877C4E1D50C85500837D8B /* MallsThemeCell.h */,
+				AD877C4F1D50C85500837D8B /* MallsThemeCell.m */,
+				AD877C511D50CB4D00837D8B /* MallsThemeCellHeader.h */,
+				AD877C521D50CB4D00837D8B /* MallsThemeCellHeader.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1056,6 +1066,7 @@
 				AD3F0E531D3E292800D1C690 /* Author.m in Sources */,
 				AD3F0E491D3E292800D1C690 /* CommentCell.m in Sources */,
 				AD47999E1D1CDD0B008844AE /* AppDelegate.m in Sources */,
+				AD877C501D50C85500837D8B /* MallsThemeCell.m in Sources */,
 				AD3F0E4F1D3E292800D1C690 /* CommentViewController.m in Sources */,
 				AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */,
 				AD3F0E471D3E292800D1C690 /* ShareVM.m in Sources */,
@@ -1085,6 +1096,7 @@
 				ADE2435A1D4342220086EB9E /* MallsTopCell.m in Sources */,
 				ADAAC6041D3F3C9800C0C613 /* TopViewModel.m in Sources */,
 				ADA120991D390DCA00F21133 /* NSDate+Extention.m in Sources */,
+				AD877C531D50CB4D00837D8B /* MallsThemeCellHeader.m in Sources */,
 				AD3F0E601D3E297A00D1C690 /* TopViewController.m in Sources */,
 				AD47999B1D1CDD0B008844AE /* main.m in Sources */,
 				AD3F0E591D3E292800D1C690 /* TitleBtn.m in Sources */,
