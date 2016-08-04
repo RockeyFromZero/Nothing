@@ -23,6 +23,9 @@ static NSString *BlurViewReuserCellId = @"BlurViewReuserCellId";
 /** headers  */
 @property (nonatomic, strong) NSMutableArray *headers;
 
+/** selected section */
+@property (nonatomic, assign) NSInteger selectedSection;
+
 @end
 
 @implementation BlurView
@@ -179,13 +182,29 @@ static NSString *BlurViewReuserCellId = @"BlurViewReuserCellId";
     }
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    view.tintColor = [UIColor clearColor];
+}
 #pragma mark - MallsCategoryHeaderDelegate
 - (void)mallsCategoryHeader:(MallsCategoryHeader *)header didSelectAtSection:(NSInteger)section {
     if (BlurViewType_malls == self.type) {
+// TODO: 这里的 调整 做的 很不漂亮，但是 现在 时间不多了，暂时 不作调整
         MallsCategoryHeaderModel *model = header.model;
+        
+        if (!model.isShowChild) {
+            MallsCategoryHeaderModel *selectModel = (MallsCategoryHeaderModel *)self.headers[_selectedSection];
+            if (selectModel.isShowChild) {
+                selectModel.isShowChild = !selectModel.isShowChild;
+                [self.headers replaceObjectAtIndex:_selectedSection withObject:selectModel];
+                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:_selectedSection] withRowAnimation:UITableViewRowAnimationFade];
+            }
+        }
+        
         model.isShowChild = !model.isShowChild;
         [self.headers replaceObjectAtIndex:header.tag withObject:model];
+        _selectedSection = header.tag;
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:header.tag] withRowAnimation:UITableViewRowAnimationFade];
+
     }
 }
 

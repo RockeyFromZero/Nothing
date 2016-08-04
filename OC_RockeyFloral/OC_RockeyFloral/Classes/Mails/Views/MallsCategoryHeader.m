@@ -26,19 +26,12 @@
         [self setupUI];
         [self bindModel];
         
-        UITapGestureRecognizer *tap = [UITapGestureRecognizer new];
-        [self addGestureRecognizer:tap];
-        [[tap rac_gestureSignal] subscribeNext:^(id x) {
-            if (_delegate && [_delegate respondsToSelector:@selector(mallsCategoryHeader:didSelectAtSection:)]) {
-                [_delegate mallsCategoryHeader:self didSelectAtSection:self.tag];
-            }
-        }];
+        
     }
     return self;
 }
 - (void)setupUI {
-    self.contentView.backgroundColor = [UIColor whiteColor];
-    
+    self.backgroundView.tintColor = [UIColor clearColor];
     [self.button makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.contentView);
         make.height.equalTo(44);
@@ -56,6 +49,14 @@
     }];
     
     [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        if (_delegate && [_delegate respondsToSelector:@selector(mallsCategoryHeader:didSelectAtSection:)]) {
+            [_delegate mallsCategoryHeader:self didSelectAtSection:self.tag];
+        }
+    }];
+    
+    UITapGestureRecognizer *tap = [UITapGestureRecognizer new];
+    [self addGestureRecognizer:tap];
+    [[tap rac_gestureSignal] subscribeNext:^(id x) {
         if (_delegate && [_delegate respondsToSelector:@selector(mallsCategoryHeader:didSelectAtSection:)]) {
             [_delegate mallsCategoryHeader:self didSelectAtSection:self.tag];
         }
