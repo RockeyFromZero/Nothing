@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OC_RockeyFloral/Classes/Mails/Views/MallsThemeCell.m"
+            timestampString = "491922947.625868"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-bindModel"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[MallsThemeCell bindModel]_block_invoke"
+                  moduleName = "OC_RockeyFloral"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Rockey/Downloads/demo/flow/GitOC_Rockey/OC_RockeyFloral/OC_RockeyFloral/Classes/Mails/Views/MallsThemeCell.m"
+                  timestampString = "491922948.027307"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[MallsThemeCell bindModel]_block_invoke_2"
+                  moduleName = "OC_RockeyFloral"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Rockey/Downloads/demo/flow/GitOC_Rockey/OC_RockeyFloral/OC_RockeyFloral/Classes/Mails/Views/MallsThemeCell.m"
+                  timestampString = "491922948.02855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

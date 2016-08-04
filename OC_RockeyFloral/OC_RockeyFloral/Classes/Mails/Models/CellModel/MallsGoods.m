@@ -14,13 +14,15 @@
              @"fnDesc":@"fnDesc",
              @"fnId":@"fnId",
              @"fnName":@"fnName",
-             @"goodsList":@"goodsList"
+             @"goodsList":@"childrenList"
              };
 }
 
 + (NSValueTransformer *)goodsListJSONTransformer {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSArray *value, BOOL *success, NSError *__autoreleasing *error) {
-        return [MTLJSONAdapter modelsOfClass:[Goods class] fromJSONArray:value error:nil];
+        return [MTLJSONAdapter modelsOfClass:[Goods class] fromJSONArray:[[[value rac_sequence] map:^id(NSDictionary *dic) {
+            return dic[@"pGoods"];
+        }] array] error:nil];
     }];
 }
 

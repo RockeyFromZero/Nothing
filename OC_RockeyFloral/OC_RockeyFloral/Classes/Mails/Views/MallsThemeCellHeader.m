@@ -20,14 +20,32 @@
 @implementation MallsThemeCellHeader
 - (instancetype)init {
     if (self = [super init]) {
-        
+        [self createUI];
+        [self bindModel];
     }
     return self;
 }
 - (void)createUI {
     
+    [self.descLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(20);
+        make.top.equalTo(12);
+    }];
+    [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.descLabel);
+        make.top.equalTo(self.descLabel.mas_bottom).offset(5);
+    }];
+    [self.button makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.right.equalTo(-20);
+    }];
 }
-
+- (void)bindModel {
+    [[RACObserve(self, model) ignore:nil] subscribeNext:^(MallsGoods *model) {
+        self.descLabel.text = model.fnDesc;
+        self.titleLabel.text = model.fnName;
+    }];
+}
 
 #pragma mark - lazy load
 - (UILabel *)descLabel {

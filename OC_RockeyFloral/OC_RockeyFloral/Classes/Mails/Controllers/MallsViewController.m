@@ -12,6 +12,7 @@
 #import "BlurView.h"
 #import "MallsTopCell.h"
 #import "MallsNormalCell.h"
+#import "MallsThemeCell.h"
 
 #import "MallsViewModel.h"
 #import "MallsCategoryVM.h"
@@ -97,6 +98,7 @@
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     [self.tableView registerClass:[MallsNormalCell class] forCellReuseIdentifier:NSStringFromClass([MallsNormalCell class])];
+    [self.tableView registerClass:[MallsThemeCell class] forCellReuseIdentifier:NSStringFromClass([MallsThemeCell class])];
     [self.tableView registerClass:[MallsTopCell class] forCellReuseIdentifier:NSStringFromClass([MallsTopCell class])];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self showHUD:@"get first"];
@@ -145,6 +147,11 @@
         cell.model = (Goods *)self.jingxuanDatas[indexPath.row];
         return cell;
     }
+    if (MallType_theme == self.mallType) {
+        MallsThemeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MallsThemeCell class])];
+        cell.model = (MallsGoods *)self.themeDatas[indexPath.row];
+        return cell;
+    }
     NSString *title = self.mallType == MallType_theme ? @"商城" : @"精选";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     cell.textLabel.text = [NSString stringWithFormat:@"%ld-%ld-%@",(long)indexPath.section,(long)indexPath.row,title];
@@ -153,8 +160,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (0 == indexPath.section) {
         return 264;
+    } else if (MallType_jingxuan == self.mallType) {
+        return 280;
+    } else {
+        MallsGoods *mall = self.themeDatas[indexPath.row];
+        NSInteger count = mall.goodsList.count;
+        CGFloat height = (count%2==0 ? count/2 : (count/2 + 1)) * kScreenWidth/2.0;
+        return height + kMallsThemeCellHeaderHeight + 10;
     }
-    return 280;
 }
 
 #pragma mark - lazy load

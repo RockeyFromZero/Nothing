@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MallsGoods.h"
 
-#define kMallsThemeCellHeaderHeight  30
+#define kMallsThemeCellHeaderHeight  60
 
 @interface MallsThemeCell : UITableViewCell
 
