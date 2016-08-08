@@ -29,7 +29,12 @@
 
 - (void)clickAction {
     [[self rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        self.selected = !self.selected;
+        
+        Ivar imgIvar = class_getInstanceVariable([UIImageAsset class], "_assetName");
+        NSString *imgName = object_getIvar(self.imageView.image.imageAsset, imgIvar);
+        if (![imgName isEqualToString:@"goto"]) {
+            self.selected = !self.selected;
+        }
     }];
 }
 

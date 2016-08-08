@@ -15,6 +15,9 @@
 #import "MallsViewController.h"
 #import "ProfileViewController.h"
 
+#import "LoginTool.h"
+#import "LoginController.h"
+
 @interface MainViewController()<UITabBarControllerDelegate>
 
 @end
@@ -58,7 +61,17 @@
 }
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-    
+    if ([tabBarController.childViewControllers indexOfObject:viewController] == tabBarController.childViewControllers.count-1) {
+        if (![[LoginTool shareInstance] isLogin]) {
+            LoginController *controller = [[LoginController alloc] init];
+            controller.loginType = LoginType_login;
+            NavigationController *nav = [[NavigationController alloc] initWithRootViewController:controller];
+            [nav.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+            [nav.navigationBar setShadowImage:[UIImage new]];
+            [self presentViewController:nav animated:YES completion:nil];
+        }
+        return [[LoginTool shareInstance] isLogin];
+    }
     return YES;
 }
 

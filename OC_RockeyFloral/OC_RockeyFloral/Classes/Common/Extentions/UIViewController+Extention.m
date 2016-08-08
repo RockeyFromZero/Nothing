@@ -114,8 +114,9 @@
                 }
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
                 alert.view.alpha = .6;
-                [self presentViewController:alert animated:NO completion:nil];
-                [alert performSelector:@selector(dismissViewControllerAnimated:completion:) withObject:nil afterDelay:2.0];
+                [self presentViewController:alert animated:NO completion:^{
+                    [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.2];
+                }];
             }
                 break;
             default:
@@ -123,6 +124,10 @@
         }
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+}
+
+- (void)dismissAlert:(UIAlertController *)alert {
+    [alert dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma  mark TitleLabel

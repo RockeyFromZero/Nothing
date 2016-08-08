@@ -71,7 +71,6 @@
 		ADA120961D39031F00F21133 /* image.js in Resources */ = {isa = PBXBuildFile; fileRef = ADA120951D39031F00F21133 /* image.js */; };
 		ADA120991D390DCA00F21133 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA120981D390DCA00F21133 /* NSDate+Extention.m */; };
 		ADA8708E1D1D19E300E94988 /* MallsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA8708D1D1D19E300E94988 /* MallsViewController.m */; };
-		ADA870911D1D1A0400E94988 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA870901D1D1A0400E94988 /* ProfileViewController.m */; };
 		ADA870B31D20B01300E94988 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA870B51D20B01300E94988 /* Localizable.strings */; };
 		ADAAC5F21D3F0E9E00C0C613 /* TopArticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAAC5F11D3F0E9E00C0C613 /* TopArticalCell.m */; };
 		ADAAC5F31D3F0E9E00C0C613 /* TopArticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAAC5F11D3F0E9E00C0C613 /* TopArticalCell.m */; };
@@ -88,6 +87,15 @@
 		ADAAC60C1D409B2B00C0C613 /* TopAuthorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAAC60B1D409B2B00C0C613 /* TopAuthorCell.m */; };
 		ADB5684F1D45A3BB008E3FBD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5684A1D45A3BB008E3FBD /* libWeChatSDK.a */; };
 		ADB568501D45A3BB008E3FBD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = ADB5684B1D45A3BB008E3FBD /* README.md */; };
+		ADC1E5E21D58AB6200E41DB6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5DA1D58AB6200E41DB6 /* ProfileViewController.m */; };
+		ADC1E5E51D58AB7D00E41DB6 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5E41D58AB7D00E41DB6 /* LoginController.m */; };
+		ADC1E5E81D58ABB000E41DB6 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5E71D58ABB000E41DB6 /* LoginView.m */; };
+		ADC1E5EB1D58ABC300E41DB6 /* LoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5EA1D58ABC300E41DB6 /* LoginInputView.m */; };
+		ADC1E5EE1D58ADD700E41DB6 /* LoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5ED1D58ADD700E41DB6 /* LoginTool.m */; };
+		ADC1E5F11D58E84100E41DB6 /* CountryController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5F01D58E84100E41DB6 /* CountryController.m */; };
+		ADC1E5F61D58E88F00E41DB6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F31D58E88F00E41DB6 /* area.plist */; };
+		ADC1E5F71D58E88F00E41DB6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F41D58E88F00E41DB6 /* city.plist */; };
+		ADC1E5F81D58E88F00E41DB6 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F51D58E88F00E41DB6 /* country.plist */; };
 		ADC5E1AD1D2411BF00B8D12C /* font.md in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1AA1D2411BF00B8D12C /* font.md */; };
 		ADC5E1B51D24A8F800B8D12C /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B21D24A8F800B8D12C /* HJCornerRadius.m */; };
 		ADC5E1B61D24A8F800B8D12C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B41D24A8F800B8D12C /* UIColor+Extention.m */; };
@@ -232,8 +240,6 @@
 		ADA120981D390DCA00F21133 /* NSDate+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extention.m"; sourceTree = "<group>"; };
 		ADA8708C1D1D19E300E94988 /* MallsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MallsViewController.h; sourceTree = "<group>"; };
 		ADA8708D1D1D19E300E94988 /* MallsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MallsViewController.m; sourceTree = "<group>"; };
-		ADA8708F1D1D1A0400E94988 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		ADA870901D1D1A0400E94988 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		ADA870B41D20B01300E94988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADA870B61D20B01500E94988 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ADA870B71D20B03700E94988 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -252,6 +258,21 @@
 		ADB5684C1D45A3BB008E3FBD /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		ADB5684D1D45A3BB008E3FBD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		ADB5684E1D45A3BB008E3FBD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		ADC1E5D91D58AB6200E41DB6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		ADC1E5DA1D58AB6200E41DB6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		ADC1E5E31D58AB7D00E41DB6 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		ADC1E5E41D58AB7D00E41DB6 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		ADC1E5E61D58ABB000E41DB6 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		ADC1E5E71D58ABB000E41DB6 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		ADC1E5E91D58ABC300E41DB6 /* LoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInputView.h; sourceTree = "<group>"; };
+		ADC1E5EA1D58ABC300E41DB6 /* LoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInputView.m; sourceTree = "<group>"; };
+		ADC1E5EC1D58ADD700E41DB6 /* LoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTool.h; sourceTree = "<group>"; };
+		ADC1E5ED1D58ADD700E41DB6 /* LoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTool.m; sourceTree = "<group>"; };
+		ADC1E5EF1D58E84100E41DB6 /* CountryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryController.h; sourceTree = "<group>"; };
+		ADC1E5F01D58E84100E41DB6 /* CountryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryController.m; sourceTree = "<group>"; };
+		ADC1E5F31D58E88F00E41DB6 /* area.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = area.plist; sourceTree = "<group>"; };
+		ADC1E5F41D58E88F00E41DB6 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = city.plist; sourceTree = "<group>"; };
+		ADC1E5F51D58E88F00E41DB6 /* country.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = country.plist; sourceTree = "<group>"; };
 		ADC5E1A41D23F82E00B8D12C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		ADC5E1AA1D2411BF00B8D12C /* font.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = font.md; sourceTree = "<group>"; };
 		ADC5E1B11D24A8F800B8D12C /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
@@ -737,34 +758,10 @@
 		ADA870851D1D19AA00E94988 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				ADA870861D1D19AA00E94988 /* Controllers */,
-				ADA870871D1D19AA00E94988 /* Models */,
-				ADA870881D1D19AA00E94988 /* Views */,
+				ADC1E5DD1D58AB6200E41DB6 /* Login */,
+				ADC1E5D71D58AB6200E41DB6 /* Profile */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		ADA870861D1D19AA00E94988 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				ADA8708F1D1D1A0400E94988 /* ProfileViewController.h */,
-				ADA870901D1D1A0400E94988 /* ProfileViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		ADA870871D1D19AA00E94988 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		ADA870881D1D19AA00E94988 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		ADAAC5EF1D3F0E7300C0C613 /* Cell */ = {
@@ -794,9 +791,102 @@
 			path = wechat;
 			sourceTree = "<group>";
 		};
+		ADC1E5D71D58AB6200E41DB6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5D81D58AB6200E41DB6 /* Controllers */,
+				ADC1E5DB1D58AB6200E41DB6 /* Models */,
+				ADC1E5DC1D58AB6200E41DB6 /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		ADC1E5D81D58AB6200E41DB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5D91D58AB6200E41DB6 /* ProfileViewController.h */,
+				ADC1E5DA1D58AB6200E41DB6 /* ProfileViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ADC1E5DB1D58AB6200E41DB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADC1E5DC1D58AB6200E41DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADC1E5DD1D58AB6200E41DB6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5DE1D58AB6200E41DB6 /* Controllers */,
+				ADC1E5E11D58AB6200E41DB6 /* Views */,
+				ADC1E5DF1D58AB6200E41DB6 /* Models */,
+				ADC1E5E01D58AB6200E41DB6 /* Tools */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ADC1E5DE1D58AB6200E41DB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5E31D58AB7D00E41DB6 /* LoginController.h */,
+				ADC1E5E41D58AB7D00E41DB6 /* LoginController.m */,
+				ADC1E5EF1D58E84100E41DB6 /* CountryController.h */,
+				ADC1E5F01D58E84100E41DB6 /* CountryController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ADC1E5DF1D58AB6200E41DB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADC1E5E01D58AB6200E41DB6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5EC1D58ADD700E41DB6 /* LoginTool.h */,
+				ADC1E5ED1D58ADD700E41DB6 /* LoginTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		ADC1E5E11D58AB6200E41DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5E61D58ABB000E41DB6 /* LoginView.h */,
+				ADC1E5E71D58ABB000E41DB6 /* LoginView.m */,
+				ADC1E5E91D58ABC300E41DB6 /* LoginInputView.h */,
+				ADC1E5EA1D58ABC300E41DB6 /* LoginInputView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADC1E5F21D58E88F00E41DB6 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E5F31D58E88F00E41DB6 /* area.plist */,
+				ADC1E5F41D58E88F00E41DB6 /* city.plist */,
+				ADC1E5F51D58E88F00E41DB6 /* country.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
 		ADC5E1A81D2411BF00B8D12C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E5F21D58E88F00E41DB6 /* Plists */,
 				ADA120941D3902EF00F21133 /* js */,
 				AD158C6C1D2B868900B9B708 /* Pictures */,
 				ADC5E1A91D2411BF00B8D12C /* Fonts */,
@@ -982,13 +1072,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA1207D1D3880CC00F21133 /* CODE BOLD.OTF in Resources */,
+				ADC1E5F61D58E88F00E41DB6 /* area.plist in Resources */,
 				AD928F5E1D36165600B5B3D1 /* Bodoni Ornaments.ttf in Resources */,
+				ADC1E5F81D58E88F00E41DB6 /* country.plist in Resources */,
 				ADA1207E1D3880CC00F21133 /* CODE LIGHT.OTF in Resources */,
 				AD158C6E1D2B868900B9B708 /* gif_wifi.gif in Resources */,
 				ADA120961D39031F00F21133 /* image.js in Resources */,
 				AD4799AC1D1CDD0B008844AE /* LaunchScreen.storyboard in Resources */,
 				ADA120801D3880CC00F21133 /* 方正兰亭纤黑简体.TTF in Resources */,
 				ADA870B31D20B01300E94988 /* Localizable.strings in Resources */,
+				ADC1E5F71D58E88F00E41DB6 /* city.plist in Resources */,
 				AD4799A91D1CDD0B008844AE /* Assets.xcassets in Resources */,
 				AD56EED31D387A7600F9685A /* Kaiti.ttf in Resources */,
 			);
@@ -1069,9 +1162,12 @@
 				AD3F0E581D3E292800D1C690 /* HomeCellBottomView.m in Sources */,
 				ADE243691D43524E0086EB9E /* MallsCategory.m in Sources */,
 				AD3F0E531D3E292800D1C690 /* Author.m in Sources */,
+				ADC1E5E81D58ABB000E41DB6 /* LoginView.m in Sources */,
 				AD3F0E491D3E292800D1C690 /* CommentCell.m in Sources */,
 				AD47999E1D1CDD0B008844AE /* AppDelegate.m in Sources */,
 				AD877C501D50C85500837D8B /* MallsThemeCell.m in Sources */,
+				ADC1E5E21D58AB6200E41DB6 /* ProfileViewController.m in Sources */,
+				ADC1E5EB1D58ABC300E41DB6 /* LoginInputView.m in Sources */,
 				AD3F0E4F1D3E292800D1C690 /* CommentViewController.m in Sources */,
 				AD877C4D1D50C4E100837D8B /* ADSViewModel.m in Sources */,
 				AD3F0E471D3E292800D1C690 /* ShareVM.m in Sources */,
@@ -1081,17 +1177,19 @@
 				ADE243571D43420D0086EB9E /* MallsNormalCell.m in Sources */,
 				AD3BE1931D25FCE600B2B54C /* NetworkTool.m in Sources */,
 				ADE2436A1D43524E0086EB9E /* MallsCategoryVM.m in Sources */,
+				ADC1E5EE1D58ADD700E41DB6 /* LoginTool.m in Sources */,
 				AD3F0E551D3E292800D1C690 /* CategoryViewModel.m in Sources */,
 				AD3F0E461D3E292800D1C690 /* CommentModel.m in Sources */,
 				AD3F0E521D3E292800D1C690 /* Artical.m in Sources */,
 				ADAAC60C1D409B2B00C0C613 /* TopAuthorCell.m in Sources */,
+				ADC1E5E51D58AB7D00E41DB6 /* LoginController.m in Sources */,
 				AD9885F31D479727006C10A6 /* ADS.m in Sources */,
 				AD3F0E4A1D3E292800D1C690 /* DetailFooterView.m in Sources */,
 				AD3F0E651D3E341B00D1C690 /* TopMenuView.m in Sources */,
 				AD7E20091D520E1F006DA624 /* MallsThemeCollectionCell.m in Sources */,
 				ADE243511D4264190086EB9E /* SearchBar.m in Sources */,
+				ADC1E5F11D58E84100E41DB6 /* CountryController.m in Sources */,
 				AD4799A71D1CDD0B008844AE /* OC_RockeyFloral.xcdatamodeld in Sources */,
-				ADA870911D1D1A0400E94988 /* ProfileViewController.m in Sources */,
 				ADA8708E1D1D19E300E94988 /* MallsViewController.m in Sources */,
 				AD3F0E4E1D3E292800D1C690 /* ShareBlurView.m in Sources */,
 				AD3F0E4D1D3E292800D1C690 /* DetailWebCell.m in Sources */,

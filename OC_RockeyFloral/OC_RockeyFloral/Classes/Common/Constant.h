@@ -32,6 +32,21 @@ typedef NS_ENUM(NSInteger, MallType) {
     MallType_theme
 };
 
+/** LoginType */
+typedef NS_ENUM(NSInteger, LoginType) {
+    LoginType_login = 1,
+    LoginType_regist,
+    LoginType_forgetPwd
+};
+
+
+
+/********* ********* ********* noti ********* ********* *********/
+#define kToLocalController @"kToLocalController"
+#define kLocalDidSelected @"kLocalDidSelected"
+
+
+
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 /** 导航栏高度 */
