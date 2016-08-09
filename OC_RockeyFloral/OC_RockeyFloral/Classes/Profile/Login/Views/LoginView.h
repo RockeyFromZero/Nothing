@@ -10,9 +10,6 @@
 
 @protocol LoginViewDelegate <NSObject>
 
-//- (void)loginViewDidRegist;
-//- (void)loginViewDidForgetPassword;
-
 - (void)loginViewDidSelected:(LoginType)loginType;
 
 @end

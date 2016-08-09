@@ -96,6 +96,9 @@
 		ADC1E5F61D58E88F00E41DB6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F31D58E88F00E41DB6 /* area.plist */; };
 		ADC1E5F71D58E88F00E41DB6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F41D58E88F00E41DB6 /* city.plist */; };
 		ADC1E5F81D58E88F00E41DB6 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADC1E5F51D58E88F00E41DB6 /* country.plist */; };
+		ADC1E5FB1D59AB4400E41DB6 /* ProfileCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5FA1D59AB4400E41DB6 /* ProfileCollectionHeader.m */; };
+		ADC1E5FE1D59ADD200E41DB6 /* ProfileUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E5FD1D59ADD200E41DB6 /* ProfileUserInfoCell.m */; };
+		ADC1E6011D59ADF200E41DB6 /* ProfileArticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E6001D59ADF200E41DB6 /* ProfileArticalCell.m */; };
 		ADC5E1AD1D2411BF00B8D12C /* font.md in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1AA1D2411BF00B8D12C /* font.md */; };
 		ADC5E1B51D24A8F800B8D12C /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B21D24A8F800B8D12C /* HJCornerRadius.m */; };
 		ADC5E1B61D24A8F800B8D12C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC5E1B41D24A8F800B8D12C /* UIColor+Extention.m */; };
@@ -273,6 +276,12 @@
 		ADC1E5F31D58E88F00E41DB6 /* area.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = area.plist; sourceTree = "<group>"; };
 		ADC1E5F41D58E88F00E41DB6 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = city.plist; sourceTree = "<group>"; };
 		ADC1E5F51D58E88F00E41DB6 /* country.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = country.plist; sourceTree = "<group>"; };
+		ADC1E5F91D59AB4400E41DB6 /* ProfileCollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionHeader.h; sourceTree = "<group>"; };
+		ADC1E5FA1D59AB4400E41DB6 /* ProfileCollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionHeader.m; sourceTree = "<group>"; };
+		ADC1E5FC1D59ADD200E41DB6 /* ProfileUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileUserInfoCell.h; sourceTree = "<group>"; };
+		ADC1E5FD1D59ADD200E41DB6 /* ProfileUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileUserInfoCell.m; sourceTree = "<group>"; };
+		ADC1E5FF1D59ADF200E41DB6 /* ProfileArticalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileArticalCell.h; sourceTree = "<group>"; };
+		ADC1E6001D59ADF200E41DB6 /* ProfileArticalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileArticalCell.m; sourceTree = "<group>"; };
 		ADC5E1A41D23F82E00B8D12C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		ADC5E1AA1D2411BF00B8D12C /* font.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = font.md; sourceTree = "<group>"; };
 		ADC5E1B11D24A8F800B8D12C /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
@@ -820,6 +829,12 @@
 		ADC1E5DC1D58AB6200E41DB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E5F91D59AB4400E41DB6 /* ProfileCollectionHeader.h */,
+				ADC1E5FA1D59AB4400E41DB6 /* ProfileCollectionHeader.m */,
+				ADC1E5FC1D59ADD200E41DB6 /* ProfileUserInfoCell.h */,
+				ADC1E5FD1D59ADD200E41DB6 /* ProfileUserInfoCell.m */,
+				ADC1E5FF1D59ADF200E41DB6 /* ProfileArticalCell.h */,
+				ADC1E6001D59ADF200E41DB6 /* ProfileArticalCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1187,14 +1202,17 @@
 				AD3F0E4A1D3E292800D1C690 /* DetailFooterView.m in Sources */,
 				AD3F0E651D3E341B00D1C690 /* TopMenuView.m in Sources */,
 				AD7E20091D520E1F006DA624 /* MallsThemeCollectionCell.m in Sources */,
+				ADC1E5FB1D59AB4400E41DB6 /* ProfileCollectionHeader.m in Sources */,
 				ADE243511D4264190086EB9E /* SearchBar.m in Sources */,
 				ADC1E5F11D58E84100E41DB6 /* CountryController.m in Sources */,
 				AD4799A71D1CDD0B008844AE /* OC_RockeyFloral.xcdatamodeld in Sources */,
 				ADA8708E1D1D19E300E94988 /* MallsViewController.m in Sources */,
+				ADC1E5FE1D59ADD200E41DB6 /* ProfileUserInfoCell.m in Sources */,
 				AD3F0E4E1D3E292800D1C690 /* ShareBlurView.m in Sources */,
 				AD3F0E4D1D3E292800D1C690 /* DetailWebCell.m in Sources */,
 				AD9885AE1D463D86006C10A6 /* MallsCategoryHeaderModel.m in Sources */,
 				ADAAC5F21D3F0E9E00C0C613 /* TopArticalCell.m in Sources */,
+				ADC1E6011D59ADF200E41DB6 /* ProfileArticalCell.m in Sources */,
 				AD3F0E541D3E292800D1C690 /* Category.m in Sources */,
 				AD4799DD1D1CDF83008844AE /* UINavigationController+Extention.m in Sources */,
 				ADE2435A1D4342220086EB9E /* MallsTopCell.m in Sources */,

@@ -12,7 +12,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)setLoginStatus:(BOOL)status;
-- (BOOL)isLogin;
++ (void)setLoginStatus:(BOOL)status;
++ (BOOL)isLogin;
 
 @end

@@ -30,17 +30,16 @@
 - (void)getDatas {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"country" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *keys = [[dic allKeys] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        return obj1 > obj2;
-    }];
     
-    _countryList = [[[keys rac_sequence] map:^id(id value) {
+    _countryList = [[[[[dic allKeys] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return obj1 > obj2;
+    }] rac_sequence] map:^id(id value) {
         return [CountryModel mj_objectWithKeyValues:@{@"key":value,@"value":dic[value]}];
     }] array];
 }
 
 - (void)setupUI {
-    self.title = @"国家/地区";
+    self.title = @"选择国家和地区";
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];

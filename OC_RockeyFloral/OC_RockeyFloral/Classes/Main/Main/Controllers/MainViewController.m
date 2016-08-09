@@ -47,7 +47,7 @@
     /** text color */
     self.tabBar.tintColor = [UIColor brownColor];
     /** background color */
-//    self.tabBar.barTintColor = [UIColor blackColor];
+    self.tabBar.barTintColor = [UIColor whiteColor];
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title {
@@ -62,7 +62,8 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     if ([tabBarController.childViewControllers indexOfObject:viewController] == tabBarController.childViewControllers.count-1) {
-        if (![[LoginTool shareInstance] isLogin]) {
+        [LoginTool setLoginStatus:true];
+        if (![LoginTool isLogin]) {
             LoginController *controller = [[LoginController alloc] init];
             controller.loginType = LoginType_login;
             NavigationController *nav = [[NavigationController alloc] initWithRootViewController:controller];
@@ -70,7 +71,7 @@
             [nav.navigationBar setShadowImage:[UIImage new]];
             [self presentViewController:nav animated:YES completion:nil];
         }
-        return [[LoginTool shareInstance] isLogin];
+        return [LoginTool isLogin];
     }
     return YES;
 }

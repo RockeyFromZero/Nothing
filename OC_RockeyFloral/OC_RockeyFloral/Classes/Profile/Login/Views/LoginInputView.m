@@ -170,7 +170,7 @@
 - (void)cancelTimer {
     if (self.isTimerSet) {
         dispatch_cancel(self.timer);
-        objc_setAssociatedObject(self, @selector(timerBegin), @0, OBJC_ASSOCIATION_ASSIGN);
+        _isTimerSet = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.verifyBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
             [self.verifyBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -185,16 +185,14 @@
     dispatch_queue_t timerQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, timerQueue);
     _timer = timer;
-    _isTimerSet = YES;
     
     dispatch_source_set_timer(timer, dispatch_walltime(nil, 0), 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(timer, ^{
         if (seconds <= 0) {
             [self cancelTimer];
         } else {
-            if ([objc_getAssociatedObject(self, @selector(timerBegin)) isEqual:@0] || 
-                !objc_getAssociatedObject(self, @selector(timerBegin))) {
-                objc_setAssociatedObject(self, @selector(timerBegin), @1, OBJC_ASSOCIATION_ASSIGN);
+            if (!_isTimerSet) {
+                _isTimerSet = YES;
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     [self.verifyBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
                     self.verifyBtn.titleLabel.font = [UIFont systemFontOfSize:11];
@@ -209,7 +207,6 @@
         }
     });
     dispatch_resume(timer);
-    
 }
 
 
