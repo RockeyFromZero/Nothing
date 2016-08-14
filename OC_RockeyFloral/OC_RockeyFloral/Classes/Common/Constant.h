@@ -9,13 +9,6 @@
 #ifndef Constant_h
 #define Constant_h
 
-typedef NS_ENUM(NSUInteger, ErrorCode) {
-    ErrorCode_success,
-    ErrorCode_fail,
-    ErrorCode_NoMore,
-    ErrorCode_Network
-};
-
 /** Top 10 类型 */
 typedef NS_ENUM(NSInteger, TopType) {
     /** 专题 */

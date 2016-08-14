@@ -43,7 +43,14 @@
     
     [self addChildViewController:[[HomeViewController alloc] init] title:NSLocalizedString(@"tab_theme", nil)];
     [self addChildViewController:[[MallsViewController alloc] init] title:NSLocalizedString(@"tab_malls", nil)];
-    [self addChildViewController:[[ProfileViewController alloc] init] title:NSLocalizedString(@"tab_profile", nil)];
+    
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"selfAuthor" ofType:@"plist"]];
+    ProfileViewController *profile = [[ProfileViewController alloc] init];
+    profile.author = [MTLJSONAdapter modelOfClass:[Author class] fromJSONDictionary:dic error:nil];
+    profile.isUser = true;
+    
+    [self addChildViewController:profile title:NSLocalizedString(@"tab_profile", nil)];
     /** text color */
     self.tabBar.tintColor = [UIColor brownColor];
     /** background color */

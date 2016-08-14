@@ -37,6 +37,9 @@ extern void instrumentObjcMessageSends(BOOL);
         NSLog(@"regist  success");
     }
     
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"selfAuthor" ofType:@"plist"]];
+   [UserInfo sharedInstance].author = [MTLJSONAdapter modelOfClass:[Author class] fromJSONDictionary:dic error:nil];
+    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     MainViewController *main = [[MainViewController alloc] init];

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>identity</key>
+	<string>官方认证</string>
+	<key>headImg</key>
+	<string>http://m.htxq.net//UploadFiles/headimg/20160422164405309.jpg</string>
+	<key>content</key>
+	<string>定义自己的美好生活\n</string>
+	<key>id</key>
+	<string>4a3dab7f-1168-4a61-930c-f6bc0f989f32</string>
+	<key>auth</key>
+	<string>专家</string>
+</dict>
+</plist>

@@ -18,13 +18,13 @@
 #import "MallsCategoryVM.h"
 #import "ADSViewModel.h"
 
-@interface MallsViewController () <MallsTopCellDelegate>
+@interface MallsViewController () <MallsTopCellDelegate,UITableViewDataSource,UITableViewDelegate>
 /**  NavigationItems 依次是：标题、右上角、左上角 */
 @property (nonatomic, weak) TitleBtn *titleBtn;
 @property (nonatomic, weak) TopSearchBarView *searchBar;
 @property (nonatomic, strong) UIButton *menuBtn;
 @property (nonatomic, weak) BlurView *blurView;
-
+@property (nonatomic, weak) UITableView *tableView;
 
 @property (nonatomic, strong) MallsCategoryVM *categoryVM;
 @property (nonatomic, strong) MallsViewModel *viewModel;
@@ -89,7 +89,12 @@
     }];
 }
 - (void)setupUI {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigation];
+    
+    [self.tableView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(UIEdgeInsetsMake(kNavigationBarHeight, 0, 0, 0));
+    }];
     
     self.hudSuperView = kWindow;
     self.tableView.delegate = self;
@@ -171,6 +176,17 @@
 }
 
 #pragma mark - lazy load
+- (UITableView *)tableView {
+    if (!_tableView) {
+        UITableView *tableView = [UITableView new];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.tableFooterView = [UIView new];
+        [self.view addSubview:tableView];
+        _tableView = tableView;
+    }
+    return _tableView;
+}
 - (TitleBtn *)titleBtn {
     if (!_titleBtn) {
         TitleBtn *titleBtn = [[TitleBtn alloc] init];
@@ -213,7 +229,7 @@
         }];
         item.type = BlurViewType_malls;
         item.hidden = YES;
-        [self.tableView addSubview:item];
+        [self.view addSubview:item];
         _blurView = item;
     }
     return _blurView;
@@ -228,11 +244,11 @@
     
     if (!hideBlurView) {
         [self.blurView updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(kNavigationBarHeight+self.tableView.contentOffset.y);
+            make.top.equalTo(kNavigationBarHeight);
             make.left.equalTo(0);
             make.size.equalTo(CGSizeMake(kScreenWidth, kScreenHeight-kNavigationBarHeight-kTabBarItemHeight));
         }];
-        self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight-self.tableView.contentOffset.y);
+        self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight);
     }
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -242,7 +258,7 @@
             self.menuBtn.transform = CGAffineTransformMakeRotation(M_PI_2);
             self.tableView.scrollEnabled = false;
         } else {
-            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight-self.tableView.contentOffset.y);
+            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight);
             self.menuBtn.transform = CGAffineTransformIdentity;
             self.tableView.scrollEnabled = true;
         }

@@ -10,4 +10,7 @@
 
 @interface ProfileViewController : UICollectionViewController
 
+@property (nonatomic, strong) Author *author;
+@property (nonatomic, assign)  BOOL isUser;
+
 @end

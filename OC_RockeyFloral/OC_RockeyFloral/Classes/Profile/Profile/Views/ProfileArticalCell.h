@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Artical.h"
 
 @interface ProfileArticalCell : UICollectionViewCell
+
+@property (nonatomic, strong) Artical *model;
 
 @end

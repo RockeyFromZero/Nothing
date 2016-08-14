@@ -10,7 +10,6 @@
 
 @interface Author : MTLModel <MTLJSONSerializing>
 
-
 // 认证类型: 专家
 @property (nonatomic, copy) NSString *auth;
 // 所在城市

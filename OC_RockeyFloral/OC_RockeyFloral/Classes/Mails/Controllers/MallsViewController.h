@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MallsViewController : UITableViewController
+@interface MallsViewController : UIViewController
 
 @end

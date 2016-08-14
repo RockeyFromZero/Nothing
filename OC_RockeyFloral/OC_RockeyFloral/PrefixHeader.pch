@@ -17,16 +17,6 @@
 #define debugMethod()
 #endif
 
-#import "TitleBtn.h"
-#import "Constant.h"
-
-#import "NetworkTool.h"
-#import "UIColor+Extention.h"
-#import "UIViewController+HUD.h"
-#import "UITextField+Extention.h"
-#import "UIViewController+Extention.h"
-#import "HJCornerRadius.h"
-#import "NSDate+Extention.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
@@ -40,6 +30,28 @@
 #import <MJRefresh.h>
 #import <MBProgressHUD.h>
 #import <UIImageView+WebCache.h>
+
+/** models */
+#import "Artical.h"
+#import "Author.h"
+#import "UserInfo.h"
+
+
+/** toos */
+#import "ErrorCodeHeader.h"
+#import "Constant.h"
+#import "NetworkTool.h"
+#import "HJCornerRadius.h"
+
+/** views */
+#import "TitleBtn.h"
+
+/** extentions */
+#import "UIColor+Extention.h"
+#import "UIViewController+HUD.h"
+#import "UITextField+Extention.h"
+#import "UIViewController+Extention.h"
+#import "NSDate+Extention.h"
 
 
 #endif /* PrefixHeader_pch */

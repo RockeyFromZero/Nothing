@@ -19,7 +19,7 @@
 
 static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDelegate>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 /** 菜单按钮 */
 @property (nonatomic, strong) UIButton *menuBtn;
@@ -27,6 +27,8 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 @property (nonatomic, weak) BlurView *blurView;
 /** 标题按钮 */
 @property (nonatomic, weak) TitleBtn *titleBtn;
+/** tabelView */
+@property (nonatomic, weak) UITableView *tableView;
 
 
 /** 当前页 */
@@ -82,14 +84,17 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 }
 
 - (void)setup {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupNavigation];
     
     _showAriticals = [NSArray array];
+    [self.tableView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(UIEdgeInsetsMake(kNavigationBarHeight, 0, 0, 0));
+    }];
     [self.tableView registerClass:[HomeArticalCell class] forCellReuseIdentifier:kHomeArticalReuseId];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableFooterView = [UIView new];
     self.tableView.rowHeight = 330;
-    self.tableView.decelerationRate = .991;
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self.homeVM getNext];
@@ -143,6 +148,17 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
 }
 
 #pragma  mark - 懒加载
+- (UITableView *)tableView {
+    if (!_tableView) {
+        UITableView *tableView = [UITableView new];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.tableFooterView = [UIView new];
+        [self.view addSubview:tableView];
+        _tableView = tableView;
+    }
+    return _tableView;
+}
 - (TitleBtn *)titleBtn {
     if (!_titleBtn) {
         TitleBtn *titleBtn = [[TitleBtn alloc] init];
@@ -182,15 +198,15 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
             [self hideBlurView:true];
         }];
         item.type = BlurViewType_home;
-        [self.tableView addSubview:item];
+        [self.view addSubview:item];
         _blurView = item;
         
         [item makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).offset(self.tableView.contentOffset.y);
+            make.top.equalTo(kNavigationBarHeight);
             make.left.equalTo(self.tableView);
             make.size.equalTo(CGSizeMake(kScreenWidth, kScreenHeight-64-49));
         }];
-        item.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight-self.tableView.contentOffset.y);
+        item.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight);
     }
     return _blurView;
 }
@@ -200,11 +216,11 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
     [UIView animateWithDuration:0.5 animations:^{
         if (!hideBlurView) {
             [self.blurView updateConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.tableView).offset(self.tableView.contentOffset.y+64);
+                make.top.equalTo(64);
                 make.left.equalTo(self.tableView);
                 make.size.equalTo(CGSizeMake(kScreenWidth, kScreenHeight-64-49));
             }];
-            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight-self.tableView.contentOffset.y);
+            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight);
         }
         
         if (!hideBlurView) {
@@ -212,7 +228,7 @@ static NSString *kHomeArticalReuseId = @"kHomeArticalReuseId";
             self.menuBtn.transform = CGAffineTransformMakeRotation(M_PI_2);
             self.tableView.scrollEnabled = false;
         } else {
-            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight-self.tableView.contentOffset.y);
+            self.blurView.transform = CGAffineTransformMakeTranslation(0, -kScreenHeight);
             self.menuBtn.transform = CGAffineTransformIdentity;
             self.tableView.scrollEnabled = true;
         }

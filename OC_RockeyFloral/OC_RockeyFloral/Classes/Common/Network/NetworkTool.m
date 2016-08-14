@@ -59,7 +59,7 @@ static id sharedInstance;
             
             success(responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            failure(error);
+            if (failure) failure(error);
         }];
     });
     

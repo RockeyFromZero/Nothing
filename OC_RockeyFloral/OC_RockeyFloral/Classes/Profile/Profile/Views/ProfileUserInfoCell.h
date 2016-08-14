@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ProfileUserInfoCellDelegate <NSObject>
+
+
+@end
+
 @interface ProfileUserInfoCell : UICollectionViewCell
+
+@property (nonatomic, weak) id <ProfileUserInfoCellDelegate> delegate;
+
+@property (nonatomic, strong) Author *author;
 
 @end
