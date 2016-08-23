@@ -13,8 +13,8 @@
 #define DEBUG_Log(...) NSLog(__VA_ARGS__)
 #define DEBUG_Method() NSLog(@"[method] = >%s", __func__)
 #else 
-#define debugLog(...)
-#define debugMethod()
+#define DEBUG_Log(...)
+#define DEBUG_Method()
 #endif
 
 

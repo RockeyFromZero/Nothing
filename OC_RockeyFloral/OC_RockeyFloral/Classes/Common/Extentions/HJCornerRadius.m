@@ -18,7 +18,7 @@
 @implementation UIImage (cornerRadius)
 
 - (BOOL)aliCornerRadius {
-    return [objc_getAssociatedObject(self, @selector(aliCornerRadius)) boolValue];
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 - (void)setAliCornerRadius:(BOOL)aliCornerRadius {
@@ -56,7 +56,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString*, id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"image"]) {
-        UIImage *newImage = change[@"new"];
+        UIImage *newImage = change[NSKeyValueChangeNewKey];
         if (![newImage isKindOfClass:[UIImage class]] || newImage.aliCornerRadius) {
             return;
         }

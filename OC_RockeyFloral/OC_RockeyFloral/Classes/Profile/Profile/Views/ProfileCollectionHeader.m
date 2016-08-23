@@ -25,10 +25,9 @@
         [lable makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
         }];
+                
+        RAC(self.titleLabel, text) = [[RACObserve(self, title) ignore:@""] ignore:nil];
         
-        [[RACObserve(self, title) ignore:@""] subscribeNext:^(id x) {
-            _titleLabel.text = x;
-        }];
     }
     return self;
 }

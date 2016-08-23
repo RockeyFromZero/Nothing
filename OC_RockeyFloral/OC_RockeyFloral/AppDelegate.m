@@ -24,12 +24,18 @@
 @end
 
 extern void instrumentObjcMessageSends(BOOL);
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+}
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    /** 打印崩溃日志：避免崩溃时候，总是停留在 main  */
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    /** 记录方法调用：Hook函数 */
     instrumentObjcMessageSends(YES); 
 
     BOOL regist = [NSURLProtocol registerClass:[RURLProtocol class]];
@@ -56,12 +62,21 @@ extern void instrumentObjcMessageSends(BOOL);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UILocalNotification * localNotification = [[UILocalNotification alloc] init];
+        if (localNotification) {
+            localNotification.fireDate= [[[NSDate alloc] init] dateByAddingTimeInterval:3];
+            localNotification.timeZone=[NSTimeZone defaultTimeZone];
+            localNotification.alertBody = @"缘起缘灭，慈心不变";
+            localNotification.alertAction = @" 升级 ";
+            localNotification.soundName = @"";
+            [application scheduleLocalNotification:localNotification];
+        }
+    });
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

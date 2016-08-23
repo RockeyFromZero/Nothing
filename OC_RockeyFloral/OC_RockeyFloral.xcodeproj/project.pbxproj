@@ -1064,6 +1064,11 @@
 					AD4799951D1CDD0B008844AE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = MB745E7A8D;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AD4799B11D1CDD0B008844AE = {
 						CreatedOnToolsVersion = 7.3.1;

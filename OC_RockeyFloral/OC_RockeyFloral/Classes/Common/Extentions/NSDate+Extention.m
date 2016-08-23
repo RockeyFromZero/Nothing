@@ -30,9 +30,9 @@
         if (seconds < 60){
             return @"刚刚";
         }else if (seconds < 60 * 60){
-            return [NSString stringWithFormat:@"%ld分钟前",seconds/60];
+            return [NSString stringWithFormat:@"%ld分钟前",(long)(seconds/60)];
         }else{
-            return [NSString stringWithFormat:@"%ld小时前",seconds/60/60];
+            return [NSString stringWithFormat:@"%ld小时前",(long)(seconds/60/60)];
         }
     }else if ([calendar isDateInYesterday:self]) {
         // 昨天: 昨天 17:xx

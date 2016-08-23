@@ -115,15 +115,14 @@
 
 - (UIButton *)seeBtn {
     if (!_seeBtn) {
-        UIButton *button = [[UIButton alloc] init];
-        [button setImage:[UIImage imageNamed:@"home_cell_see"] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-        button.titleLabel.font = [UIFont systemFontOfSize:11];
-        button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-        button.userInteractionEnabled = false;
-        [self.contentView addSubview:button];
-        _seeBtn = button;
+        _seeBtn = [[UIButton alloc] init];
+        [_seeBtn setImage:[UIImage imageNamed:@"home_cell_see"] forState:UIControlStateNormal];
+        [_seeBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        _seeBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+        _seeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _seeBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        _seeBtn.userInteractionEnabled = false;
+        [self.contentView addSubview:_seeBtn];
     }
     return _seeBtn;
 }
