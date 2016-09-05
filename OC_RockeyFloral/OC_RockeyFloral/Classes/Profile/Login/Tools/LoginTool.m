@@ -34,7 +34,6 @@ static LoginTool *instance = nil;
 }
 
 - (instancetype)init {
-    /** 也可以直接返回 [LoginTool shareInstance]；但是方法的调用 还是要多调用堆栈，就多写几行代码了 */
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [super init];
